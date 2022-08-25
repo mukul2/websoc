@@ -11,7 +11,7 @@ wss.on("connection", ws => {
     ws.on("message", data => {
         //ws.send("REPLY : "+data);
         //console.log(`Client has sent us: ${data}`)
-        ws.emit("test",data);
+        //ws.emit("test",data);
     });
 
     // handling what to do when clients disconnects from server
