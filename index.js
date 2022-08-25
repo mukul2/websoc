@@ -1,6 +1,6 @@
 const app = require('express')();
 const appWs = require('express-ws')(app);
-
+const PORT = process.env.PORT || 3000;
 app.ws('/echo', ws => {
     ws.on('message', msg => {
         console.log('Received: ', msg);
@@ -8,4 +8,4 @@ app.ws('/echo', ws => {
     });
 });
 
-app.listen(1337, () => console.log('Server has been started'));
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
