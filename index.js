@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 app.ws('/echo', ws => {
     ws.on('message', msg => {
         console.log('Received: ', msg);
-        ws.send(msg);
+        ws.send("REPLY : "+msg);
     });
 });
 
