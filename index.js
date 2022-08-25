@@ -13,7 +13,7 @@ wss.on("connection", ws => {
         console.log(`Client has sent us: ${data}`)
 
         wss.clients.forEach(function each(client) {
-            client.send(msg);
+            client.send(data);
         });
     });
 
