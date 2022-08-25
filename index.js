@@ -9,6 +9,7 @@ wss.on("connection", ws => {
     console.log("new client connected");
     // sending message
     ws.on("message", data => {
+        ws.send("REPLY : "+data);
         console.log(`Client has sent us: ${data}`)
     });
 
