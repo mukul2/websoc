@@ -9,9 +9,12 @@ wss.on("connection", ws => {
     console.log("new client connected");
     // sending message
     ws.on("message", data => {
-        ws.send("REPLY : "+data);
+        //ws.send("REPLY : "+data);
         console.log(`Client has sent us: ${data}`)
-        ws.emit("test",data);
+
+        wss.clients.forEach(function each(client) {
+            client.send(msg);
+        });
     });
 
     // handling what to do when clients disconnects from server
