@@ -10,7 +10,7 @@ wss.on("connection", ws => {
     // sending message
     ws.on("message", data => {
         ws.send("REPLY : "+data);
-        //console.log(`Client has sent us: ${data}`)
+        console.log(`Client has sent us: ${data}`)
         ws.emit("test",data);
     });
 
