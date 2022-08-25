@@ -8,4 +8,4 @@ app.ws('/echo', ws => {
     });
 });
 
-app.listen(1337, () => console.log('Server has been started'));
+app.listen(8080, () => console.log('Server has been started'));
