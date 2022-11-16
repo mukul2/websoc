@@ -3,7 +3,7 @@ const WebSocketServer = require('ws');
 const PORT = process.env.PORT || 3000;
 
 // Creating a new websocket server
-const wss = new WebSocketServer.Server({ port: 3000 })
+const wss = new WebSocketServer.Server({ port: PORT })
 
 // Creating connection using websocket
 wss.on("connection", ws => {
@@ -27,7 +27,7 @@ wss.on("connection", ws => {
         console.log("Some Error occurred")
     }
 });
-console.log("The WebSocket server is running on port 3000");
+console.log("The WebSocket server is running on port "+PORT);
 
 // const app = require('express')();
 // const appWs = require('express-ws')(app);
