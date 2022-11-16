@@ -1,6 +1,7 @@
 // Importing the required modules
 const WebSocketServer = require('ws');
-const PORT = process.env.PORT || 3000;
+const PORT2 = process.env.PORT || 3000;
+const PORT =  3000;
 // Creating a new websocket server
 const wss = new WebSocketServer.Server({ port: PORT })
 
